@@ -11,6 +11,10 @@ This repository is a Neovim configuration named zVim. `init.lua` is the entrypoi
 - `nvim-lts --headless -i NONE '+checkhealth' +qa`: run Neovim health checks for providers, plugins, and tooling.
 - `./install.sh`: test the installer locally. Use environment overrides such as `ZVIM_INSTALL_DIR=/tmp/zvim-test` and `ZVIM_COMMAND_NAME=zvim-test` to avoid touching an existing setup.
 
+## Local Development Installation
+
+This checkout is the live configuration for the `zvim-dev` command. Use `zvim-dev` for interactive and headless validation so changes in this repository are tested directly. Do not modify or use the stable `zvim` installation for development tests.
+
 ## Coding Style & Naming Conventions
 
 Use Lua for Neovim modules and POSIX `sh` for installer scripts. Keep Lua indentation at two spaces, prefer double-quoted strings, and return plugin specs as simple tables from files in `lua/plugins/`. Name files by feature or plugin area using lowercase words and underscores when needed, such as `smooth_scroll_setup.lua`. Keep configuration modules small and require them from `init.lua` or `lua/config/lazy.lua` rather than adding large blocks inline.
